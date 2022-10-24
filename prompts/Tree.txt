@@ -1,0 +1,77 @@
+rootcode	pentacode	past	future
+AGREE	1	<S> agreed to do something for <T>	None
+AGREE	1	<S> promised to do something for <T>	None
+CONSULT	1	<S> held a talk with <T>	<S> agreed to hold a talk with <T>
+CONSULT	1	<S> met with <T>	<S> agreed to meet with <T>
+CONSULT	1	<S> undertook more negotiation with <T>	<S> agreed to undertake negotiation with <T>
+SUPPORT	1	<S> apologized to <T>	<S> agreed to apologize to <T>
+SUPPORT	1	<S> expressed support for <T>	<S> agreed to support <T>
+SUPPORT	1	<S> granted diplomatic recognition of <T>	<S> agreed to grant diplomatic recognition of <T>
+SUPPORT	1	<S> improved diplomatic cooperation with <T>	<S> agreed to improve diplomatic cooperation with <T>
+SUPPORT	1	<S> signed an agreement with <T>	<S> agreed to sign an agreement with <T>
+AID	2	<S> added aid to <T>	<S> agreed to provide aid to <T>
+AID	2	<S> added money to <T>	<S> agreed to add money to <T>
+AID	2	<S> granted asylum to <T>	<S> agreed to grant asylum to <T>
+AID	2	<S> increased peace forces in <T>	<S> agreed to increase peace forces in <T>
+COOPERATE	2	<S> cooperated with <T>	<S> agreed to cooperate with <T>
+COOPERATE	2	<S> extradited person to <T>	<S> agreed to extradite person to <T>
+COOPERATE	2	<S> shared information with <T>	<S> agreed to share information with <T>
+YIELD	2	<S> accepted demands of <T>	<S> promised to accept demands of <T>
+YIELD	2	<S> allowed entry of <T>	<S> promised to allow entry of <T>
+YIELD	2	<S> declared a ceasefire with <T>	<S> promised to a ceasefire with <T>
+YIELD	2	<S> eased restrictions on <T>	<S> promised to ease restrictions on <T>
+YIELD	2	<S> provided rights to <T>	<S> promised to provide rights to <T>
+YIELD	2	<S> reduced protest against <T>	<S> promised to reduce protest for <T>
+YIELD	2	<S> released person of <T>	<S> promised to release person of <T>
+YIELD	2	<S> resigned from the position in <T>	<S> promised to resign from the position in <T>
+YIELD	2	<S> retreated forces from <T>	<S> promised to retreat forces from <T>
+YIELD	2	<S> returned property of <T>	<S> promised to return property of <T>
+YIELD	2	<S> surrendered to <T>	<S> promised to surrender to <T>
+YIELD	2	<S> undertook reform in <T>	<S> promised to undertake reform in <T>
+ACCUSE	3	<S> accused <T> of something	None
+ACCUSE	3	<S> brought lawsuit against <T>	None
+ACCUSE	3	<S> expressed complaints of <T>	None
+REQUEST	3	<S> demanded something from <T>	None
+INVESTIGATE	3	<S> investigated something of <T>	<S> planned to investigate something of <T>
+INVESTIGATE	3	<S> sent people to investigate <T>	<S> planned to send people to investigate <T>
+REJECT	3	<S> defied laws of <T>	None
+REJECT	3	<S> rejected proposals of <T>	None
+REJECT	3	<S> rejected cooperation with <T>	None
+REJECT	3	<S> rejected to do something for <T>	None
+REJECT	3	<S> rejected to stop something against <T>	None
+REJECT	3	<S> rejected to consult with <T>	None
+REJECT	3	<S> rejected to yield to <T>	None
+THREATEN	3	<S> issued a ultimatum to <T>	None
+THREATEN	3	<S> threatened something against <T>	None
+ASSAULT	4	<S> assaulted person of <T>	<S> threatened to assault person of <T>
+ASSAULT	4	<S> destropyed property of <T>	<S> threatened to destropy property of <T>
+ASSAULT	4	<S> killed person of <T>	<S> threatened to kill person of <T>
+ASSAULT	4	<S> launched military strikes against <T>	<S> threatened to launch military strikes against <T>
+ASSAULT	4	<S> violated ceasefire with <T>	<S> threatened to violate ceasefire with <T>
+COERCE	4	<S> arrested person of <T>	<S> threatened to arrest person of <T>
+COERCE	4	<S> attacked <T> cybernetically	<S> threatened to attack <T> cybernetically
+COERCE	4	<S> deported person of <T>	<S> threatened to deport person of <T>
+COERCE	4	<S> detained person of <T>	<S> threatened to detain person of <T>
+COERCE	4	<S> imposed blockades in <T>	<S> threatened to impose blockades in <T>
+COERCE	4	<S> imposed state of emergency in <T>	<S> threatened to impose state of emergency in <T>
+COERCE	4	<S> imposed more restrictions on <T>	<S> threatened to impose restrictions on <T>
+COERCE	4	<S> repressed person of <T>	<S> threatened to repress person of <T>
+COERCE	4	<S> seized property of <T>	<S> threatened to seize property of <T>
+ASSAULT	4	<S> seized territory of <T>	<S> threatened to seize territory of <T>
+FIGHT	4	<S> attempted to assassinate <T>	None
+FIGHT	4	<S> used person of <T> as human shield	None
+FIGHT	4	Explosives in <S> attacked <T>	None
+MOBILIZE	4	<S> increased forces in <T>	<S> threatened to increase forces in <T>
+MOBILIZE	4	<S> kept alert in <T>	<S> threatened to keep alert in <T>
+MOBILIZE	4	<S> prepared forces against <T>	<S> threatened to prepare forces against <T>
+PROTEST	4	<S> launched protests against <T>	<S> threatened to launch protests against <T>
+PROTEST	4	<S> launched protests in <T>	<S> threatened to launch protests in <T>
+PROTEST	4	<S> protestors obstructed roads against <T>	<S> protestors threatened to obstruct roads against <T>
+PROTEST	4	<S> undertook boycotts against <T>	<S> threatened to undertake boycott against <T>
+SANCTION	4	<S> discontinued cooperation with <T>	<S> threatened to discontinue cooperation with <T>
+SANCTION	4	<S> expelled diplomatic people of <T>	<S> threatened to expel diplomatic people of <T>
+SANCTION	4	<S> expelled organizations of <T>	<S> threatened to expel organizations of <T>
+SANCTION	4	<S> expelled peacekeepers of <T>	<S> threatened to expel peacekeepers of <T>
+SANCTION	4	<S> halted negotiations with <T>	<S> threatened to halt negotiate with <T>
+SANCTION	4	<S> reduced aid to <T>	<S> threatened to reduce aid to <T>
+SANCTION	4	<S> retreated peace forces from <T>	<S> threatened to retreat peace forces from <T>

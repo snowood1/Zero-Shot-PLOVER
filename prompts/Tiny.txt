@@ -1,0 +1,19 @@
+rootcode	pentacode	past
+AGREE	1	<S> expressed intent to cooperate with <T>
+CONSULT	1	<S> consulted <T>
+SUPPORT	1	<S> engaged in diplomatic cooperation with <T>
+COOPERATE	2	<S> engaged in material cooperation with <T>
+AID	2	<S> provided aid to <T>
+YIELD	2	<S> yielded to <T>
+INVESTIGATE	3	<S> investigated <T>
+REQUEST	3	<S> demanded <T>
+ACCUSE	3	<S> disapproved <T>
+REJECT	3	<S> rejected <T>
+THREATEN	3	<S> threatened <T>
+PROTEST	4	<S> protested against <T>
+MOBILIZE	4	<S> exhibited force posture against <T>
+SANCTION	4	<S> reduced relations with <T>
+COERCE	4	<S> coerced <T>
+ASSAULT	4	<S> assaulted <T>
+FIGHT	4	<S> fought against <T>
+FIGHT	4	<S> used unconventional mass violence against <T>

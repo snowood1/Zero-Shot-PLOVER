@@ -1,0 +1,223 @@
+rootcode	pentacode	past
+AGREE	1	<S> agreed to cooperate with <T>
+AGREE	1	<S> agreed to engage in material cooperation with <T>
+AGREE	1	<S> agreed to cooperate economically with <T>
+AGREE	1	<S> agreed to cooperate militarily with <T>
+AGREE	1	<S> agreed to cooperate on judicial matters with <T>
+AGREE	1	<S> agreed to share information with <T>
+AGREE	1	<S> agreed to engage in diplomatic cooperation with <T>
+AGREE	1	<S> agreed to provide material aid to <T>
+AGREE	1	<S> agreed to provide economic aid to <T>
+AGREE	1	<S> agreed to provide military aid to <T>
+AGREE	1	<S> agreed to provide humanitarian aid to <T>
+AGREE	1	<S> agreed to provide military protection to <T>
+AGREE	1	<S> agreed to institute political reform for <T>
+AGREE	1	<S> agreed to change leadership for <T>
+AGREE	1	<S> agreed to change policy for <T>
+AGREE	1	<S> agreed to provide rights for <T>
+AGREE	1	<S> agreed to change regime for <T>
+AGREE	1	<S> agreed to yield to <T>
+AGREE	1	<S> agreed to ease administrative sanctions on <T>
+AGREE	1	<S> agreed to ease popular dissent of <T>
+AGREE	1	<S> agreed to release persons or property of <T>
+AGREE	1	<S> agreed to ease economic sanctions on <T>
+AGREE	1	<S> agreed to allow international involvement of <T>
+AGREE	1	<S> agreed to de-escalate military engagement with <T>
+AGREE	1	<S> agreed to meet and negotiate with <T>
+AGREE	1	<S> agreed to settle disputes with <T>
+AGREE	1	<S> agreed to accept mediation with <T>
+AGREE	1	<S> agreed to mediate with <T>
+CONSULT	1	<S> consulted <T>
+CONSULT	1	<S> visited <T>
+CONSULT	1	<S> hosted <T>
+CONSULT	1	<S> met <T>
+CONSULT	1	<S> mediated with <T>
+CONSULT	1	<S> engaged in negotiation with <T>
+SUPPORT	1	<S> engaged in diplomatic cooperation with <T>
+SUPPORT	1	<S> praised or endorsed <T>
+SUPPORT	1	<S> defended verbally for <T>
+SUPPORT	1	<S> rallied support on behalf of <T>
+SUPPORT	1	<S> granted diplomatic recognition of <T>
+SUPPORT	1	<S> apologized to <T>
+SUPPORT	1	<S> forgave <T>
+SUPPORT	1	<S> signed an agreement with <T>
+COOPERATE	2	<S> engaged in material cooperation with <T>
+COOPERATE	2	<S> cooperated economically with <T>
+COOPERATE	2	<S> cooperated militarily with <T>
+COOPERATE	2	<S> cooperated judicially with <T>
+COOPERATE	2	<S> shared information with <T>
+AID	2	<S> provided aid to <T>
+AID	2	<S> provided economic aid to <T>
+AID	2	<S> provided military aid to <T>
+AID	2	<S> provided humanitarian aid to <T>
+AID	2	<S> provided military protection to <T>
+AID	2	<S> provided asylum to <T>
+YIELD	2	<S> yielded to <T>
+YIELD	2	<S> eased administrative sanctions on <T>
+YIELD	2	<S> eased restrictions on political freedoms of <T>
+YIELD	2	<S> eased bans on political parties or politicians of <T>
+YIELD	2	<S> eased curfew of <T>
+YIELD	2	<S> eased state of emergency or martial law of <T>
+YIELD	2	<S> eased political dissent of <T>
+YIELD	2	<S> acceded to demands for political reform for <T>
+YIELD	2	<S> acceded to demands for change in leadership for <T>
+YIELD	2	<S> acceded to demands for change in policy for <T>
+YIELD	2	<S> acceded to demands for rights for <T>
+YIELD	2	<S> acceded to demands for change in regime for <T>
+YIELD	2	<S> released persons or property of <T>
+YIELD	2	<S> eased economic sanctions on <T>
+YIELD	2	<S> allowed international involvement for <T>
+YIELD	2	<S> receive deployment of peacekeepers for <T>
+YIELD	2	<S> received inspectors for <T>
+YIELD	2	<S> allowed humanitarian access for <T>
+YIELD	2	<S> de-escalated military engagement for <T>
+YIELD	2	<S> declared truces, ceasefires for <T>
+YIELD	2	<S> eased military blockade for <T>
+YIELD	2	<S> demobilize armed forces for <T>
+YIELD	2	<S> retreated or surrendered militarily for <T>
+INVESTIGATE	3	<S> investigate <T>
+INVESTIGATE	3	<S> investigated crimes, corruption of <T>
+INVESTIGATE	3	<S> investigated human rights abuses of <T>
+INVESTIGATE	3	<S> investigated military action of <T>
+REQUEST	3	<S> demand <T> for material cooperation
+REQUEST	3	<S> demanded <T> for economic cooperation
+REQUEST	3	<S> demanded <T> for military cooperation
+REQUEST	3	<S> demanded <T> for sharing information
+REQUEST	3	<S> demanded <T> for diplomatic cooperation (such as policy support)
+REQUEST	3	<S> demanded <T> for material aid
+REQUEST	3	<S> demanded <T> for economic aid
+REQUEST	3	<S> demanded <T> for military aid
+REQUEST	3	<S> demanded <T> for humanitarian aid
+REQUEST	3	<S> demanded <T> for military protection
+REQUEST	3	<S> demanded <T> for political reform
+REQUEST	3	<S> demanded <T> for change in leadership
+REQUEST	3	<S> demanded <T> for policy change
+REQUEST	3	<S> demanded <T> for rights
+REQUEST	3	<S> demanded <T> for change in regime
+REQUEST	3	<S> demanded <T> for easing of sanctions
+REQUEST	3	<S> demanded <T> for easing of political dissent
+REQUEST	3	<S> demanded <T> for release of persons or property
+REQUEST	3	<S> demanded <T> to allow international involvement
+REQUEST	3	<S> demanded <T> for de-escalation of military engagement
+REQUEST	3	<S> demanded <T> for meeting and negotiation
+REQUEST	3	<S> demanded <T> for mediation
+ACCUSE	3	<S> criticized or denounced <T>
+ACCUSE	3	<S> accused <T> of crime, corruption
+ACCUSE	3	<S> accused <T> of human rights abuses
+ACCUSE	3	<S> accused <T> of aggression
+ACCUSE	3	<S> accused <T> of war crimes
+ACCUSE	3	<S> accused <T> of espionage, treason
+ACCUSE	3	<S> rallied opposition against <T>
+ACCUSE	3	<S> complained to <T> officially
+ACCUSE	3	<S> brought lawsuits against <T>
+ACCUSE	3	<S> convicted <T>
+REJECT	3	<S> rejected <T>'s proposal
+REJECT	3	<S> rejected <T>'s request for material cooperation
+REJECT	3	<S> rejected <T>'s request for economic cooperation
+REJECT	3	<S> rejected <T>'s request for military cooperation
+REJECT	3	<S> rejected <T>'s request for economic aid
+REJECT	3	<S> rejected <T>'s request for military aid
+REJECT	3	<S> rejected <T>'s request for humanitarian aid
+REJECT	3	<S> rejected <T>'s request for military protection
+REJECT	3	<S> rejected <T>'s request for political reform
+REJECT	3	<S> rejected <T>'s request for change in leadership
+REJECT	3	<S> rejected <T>'s request for policy change
+REJECT	3	<S> rejected <T>'s request for rights
+REJECT	3	<S> rejected <T>'s request for change in regime
+REJECT	3	<S> refused <T> to ease sanctions
+REJECT	3	<S> refused <T> to ease popular dissent
+REJECT	3	<S> refused <T> to release persons or property
+REJECT	3	<S> refused <T> to allow international involvement
+REJECT	3	<S> refused <T> to de-escalate military engagement
+REJECT	3	<S> rejected <T> to meet and negotiate
+REJECT	3	<S> rejected <T> to mediate
+REJECT	3	<S> rejected <T>'s agreement to settle dispute
+REJECT	3	<S> defied norms, law for <T>
+REJECT	3	<S> vetoed <T>'s proposal
+THREATEN	3	<S> threatened non-force for <T>
+THREATEN	3	<S> threatened to stop aid for <T>
+THREATEN	3	<S> threatened with sanctions on <T>
+THREATEN	3	<S> threatened with restrictions on <T>
+THREATEN	3	<S> threatened to ban political parties in <T>
+THREATEN	3	<S> threatened to impose curfew on <T>
+THREATEN	3	<S> threatened to impose a state of emergency or martial law on <T>
+THREATEN	3	<S> threatened with political dissent for <T>
+THREATEN	3	<S> threatened to halt negotiations for <T>
+THREATEN	3	<S> threatened to halt mediation for <T>
+THREATEN	3	<S> threatened to halt international involvement for <T>
+THREATEN	3	<S> threatened with repression for <T>
+THREATEN	3	<S> threatened with military force for <T>
+THREATEN	3	<S> threatened blockade for <T>
+THREATEN	3	<S> threatened occupation for <T>
+THREATEN	3	<S> threatened unconventional violence for <T>
+THREATEN	3	<S> threatened conventional attack for <T>
+PROTEST	4	<S> engaged in political dissent for <T>
+PROTEST	4	<S> demonstrated or rallied for <T>
+PROTEST	4	<S> protested violently for leadership change in <T>
+PROTEST	4	<S> demonstrated for policy change for <T>
+PROTEST	4	<S> demonstrated for rights for <T>
+PROTEST	4	<S> demonstrated for change in institutions, regimes for <T>
+PROTEST	4	<S> conducted hunger strikes for <T>
+PROTEST	4	<S> conducted strikes in <T>
+PROTEST	4	<S> obstructed passage to demand leadership change in <T>
+PROTEST	4	<S> obstructed passage to demand policy change for <T>
+PROTEST	4	<S> obstructed passage to demand rights for <T>
+PROTEST	4	<S> obstructed passage to demand change in regime for <T>
+PROTEST	4	<S> protested violently in <T>
+PROTEST	4	<S> engaged in violent protest for leadership change in <T>
+PROTEST	4	<S> engaged in violent protest for policy change for <T>
+PROTEST	4	<S> engaged in violent protest for rights for <T>
+PROTEST	4	<S> engaged in violent protest for change in regime for <T>
+PROTEST	4	<S> exhibited force posture for <T>
+PROTEST	4	<S> demonstrated military or police power for <T>
+MOBILIZE	4	<S> increased police alert status for <T>
+MOBILIZE	4	<S> increased military alert status for <T>
+MOBILIZE	4	<S> mobilized police power for <T>
+MOBILIZE	4	<S> mobilized armed forces for <T>
+MOBILIZE	4	<S> mobilized cyber-forces for <T>
+SANCTION	4	<S> reduced relations with <T>
+SANCTION	4	<S> broke diplomatic relations with <T>
+SANCTION	4	<S> stopped material aid for <T>
+SANCTION	4	<S> stopped economic assistance for <T>
+SANCTION	4	<S> stopped military assistance for <T>
+SANCTION	4	<S> stopped humanitarian assistance for <T>
+SANCTION	4	<S> imposed sanctions on <T>
+SANCTION	4	<S> halted negotiations with <T>
+SANCTION	4	<S> halted mediation for <T>
+SANCTION	4	<S> expelled peacekeepers of <T>
+SANCTION	4	<S> expel inspectors of <T>
+SANCTION	4	<S> expelled aid agencies of <T>
+COERCE	4	<S> seized property for <T>
+COERCE	4	<S> confiscated property for <T>
+COERCE	4	<S> destroyed property for <T>
+SANCTION	4	<S> imposed administrative sanctions on <T>
+SANCTION	4	<S> imposed restrictions on <T>
+SANCTION	4	<S> imposed curfew on <T>
+SANCTION	4	<S> imposed a state of emergency or martial law in <T>
+COERCE	4	<S> arrested <T>
+COERCE	4	<S> expelled or deported individuals of <T>
+COERCE	4	<S> used tactics of violent repression to <T>
+COERCE	4	<S> attacked <T> cybernetically
+ASSAULT	4	<S> assaulted <T>
+ASSAULT	4	<S> use unconventional violence towards <T>
+ASSAULT	4	<S> abducted <T>
+ASSAULT	4	<S> physically assaulted <T>
+ASSAULT	4	<S> sexually assaulted <T>
+ASSAULT	4	<S> tortured <T>
+ASSAULT	4	<S> killed <T> by physical assault
+ASSAULT	4	<S> conducted bombing against <T>
+ASSAULT	4	<S> used <T> as human shields
+ASSAULT	4	<S> assassinated <T>
+ASSAULT	4	<S> fought with <T>
+ASSAULT	4	<S> used conventional military force to <T>
+ASSAULT	4	<S> imposed blockades, restricted movement to <T>
+ASSAULT	4	<S> occupy the territory of <T>
+ASSAULT	4	<S> attacked <T> using guns and bombs
+ASSAULT	4	<S> attacked <T> with artillery and tanks
+ASSAULT	4	<S> attacked <T> with air strikes
+ASSAULT	4	<S> attacked <T> with weapons
+ASSAULT	4	<S> violated ceasefire with <T>
+ASSAULT	4	<S> used unconventional mass violence to <T>
+ASSAULT	4	<S> engaged in mass expulsion to <T>
+ASSAULT	4	<S> engaged in mass killings to <T>
+ASSAULT	4	<S> engaged in ethnic cleansing to <T>
