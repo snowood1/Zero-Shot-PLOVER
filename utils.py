@@ -185,17 +185,12 @@ def old_inference(processed_data,
     return out_df
 
 
-def print_result(out_df, log=False):
+def print_result(out_df, level_idx="L1", log=False):
     result = {}
 
-    binary_L1_all = out_df.binary_L1.values
-    binary_L2_all = out_df.binary_L2.values
-
-    penta_L1_all = out_df.penta_L1.values
-    penta_L2_all = out_df.penta_L2.values
-
-    root_L1_all = out_df.root_L1.values
-    root_L2_all = out_df.root_L2.values
+    binary_L1_all = out_df[f"binary_{level_idx}"].values
+    penta_L1_all = out_df[f"penta_{level_idx}"].values
+    root_L1_all = out_df[f"root_{level_idx}"].values
 
     # Binary
 
@@ -206,9 +201,6 @@ def print_result(out_df, log=False):
     target_names = ['Coop.', 'Confl.']
     result['binary_L1'] = classification_report(binary_golds, binary_L1_all, target_names=target_names,
                                                 output_dict=True)
-    result['binary_L2'] = classification_report(binary_golds, binary_L2_all, target_names=target_names,
-                                                output_dict=True)
-
     if log:
         print("\nL1 report: ")
         print(classification_report(binary_golds, binary_L1_all, target_names=target_names, digits=3))
@@ -233,35 +225,11 @@ def print_result(out_df, log=False):
         plt.ylabel("True label")
         plt.tight_layout()
 
-        print("\nL2 report: ")
-        print(classification_report(binary_golds, binary_L2_all, target_names=target_names, digits=3))
-        print("\nL2 Confusin Matrix: ")
-        cm = confusion_matrix(binary_golds, binary_L2_all)
-        print(cm)
-
-        plt.figure(figsize=(2, 3));
-        plt.imshow(cm, interpolation='nearest', norm=matplotlib.colors.PowerNorm(gamma=1 / 3));
-        plt.title("root Level 2")
-
-        thresh = cm.max() / 2
-        for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
-            plt.text(j, i, "{:,}".format(cm[i, j]),
-                     horizontalalignment="center",
-                     color="red" if cm[i, j] > thresh else "yellow")
-
-        tick_marks = np.arange(len(target_names));
-        plt.xticks(tick_marks, target_names, rotation=0);
-        plt.yticks(tick_marks, target_names);
-        plt.xlabel("Predicted label")
-        plt.ylabel("True label")
-        plt.tight_layout()
-
     # Pentacode
 
     penta_golds = out_df.gold_penta.values
     target_names = ['V-Coop.', 'M-Coop.', 'V-Confl.', 'M-Confl.']
     result['penta_L1'] = classification_report(penta_golds, penta_L1_all, target_names=target_names, output_dict=True)
-    result['penta_L2'] = classification_report(penta_golds, penta_L2_all, target_names=target_names, output_dict=True)
 
     if log:
         print("\nL1 report: ")
@@ -287,34 +255,10 @@ def print_result(out_df, log=False):
         plt.ylabel("True label")
         plt.tight_layout()
 
-        print("\nL2 report: ")
-        print(classification_report(penta_golds, penta_L2_all, target_names=target_names, digits=3))
-        print("\nL2 Confusin Matrix: ")
-        cm = confusion_matrix(penta_golds, penta_L2_all)
-        print(cm)
-
-        plt.figure(figsize=(3.5, 4));
-        plt.imshow(cm, interpolation='nearest', norm=matplotlib.colors.PowerNorm(gamma=1 / 3));
-        plt.title("root Level 2")
-
-        thresh = cm.max() / 2
-        for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
-            plt.text(j, i, "{:,}".format(cm[i, j]),
-                     horizontalalignment="center",
-                     color="red" if cm[i, j] > thresh else "yellow")
-
-        tick_marks = np.arange(len(target_names));
-        plt.xticks(tick_marks, target_names, rotation=0);
-        plt.yticks(tick_marks, target_names);
-        plt.xlabel("Predicted label")
-        plt.ylabel("True label")
-        plt.tight_layout()
-
     # Rootcode
 
     root_golds = out_df.gold_root.values
     result['root_L1'] = classification_report(root_golds, root_L1_all, output_dict=True)
-    result['root_L2'] = classification_report(root_golds, root_L2_all, output_dict=True)
 
     target_names = ["AGREE",
                     "CONSULT",
@@ -356,31 +300,6 @@ def print_result(out_df, log=False):
         plt.xlabel("Predicted label")
         plt.ylabel("True label")
         plt.tight_layout()
-
-        print("\nL2 report: ")
-        print(classification_report(root_golds, root_L2_all, digits=3))
-        print("\nL2 Confusin Matrix: ")
-        cm = confusion_matrix(root_golds, root_L2_all, labels=target_names)
-        print(cm)
-
-        plt.figure(figsize=(8, 7));
-        plt.imshow(cm, interpolation='nearest', norm=matplotlib.colors.PowerNorm(gamma=1 / 3));
-        plt.title("root Level 2")
-        plt.colorbar(shrink=0.8);
-
-        thresh = cm.max() / 2
-        for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
-            plt.text(j, i, "{:,}".format(cm[i, j]),
-                     horizontalalignment="center",
-                     color="red" if cm[i, j] > thresh else "yellow")
-
-        tick_marks = np.arange(len(target_names));
-        plt.xticks(tick_marks, target_names, rotation=45);
-        plt.yticks(tick_marks, target_names);
-        plt.xlabel("Predicted label")
-        plt.ylabel("True label")
-        plt.tight_layout()
-
     return result
 
 
@@ -457,7 +376,7 @@ Verbal_Conflict=["REQUEST", "ACCUSE"]
 Material_Conflict=["ASSAULT", "PROTEST", "SANCTION", "COERCE"]
 
 def inference(processed_data,
-              TENSE,
+              apply_level2,
               tense_L1,
               tense_L2,
               df_prompt_flatten,
@@ -533,7 +452,11 @@ def inference(processed_data,
             print(f"\n Level 1 root gold : {gold_root} \tvs. pred: {root_L1} \t==1c=> {gold_root == root_L1}")
             print(f" Level 1 penta gold : {gold_penta} \t\tvs. pred: {penta_L1} \t\t==1p=> {gold_penta == penta_L1}")
 
-        # ==================== Class ambiguation  ==================== #
+        if not apply_level2:
+            continue
+
+        # ==================== Class disambiguation  ==================== #
+
         if peace_overwrite:
             if len(df_L1[df_L1.prompt_text.str.contains("peace")]) > 0:
                 df_L1 = df_L1[~(df_L1.prompt_text.str.contains("forces") & ~df_L1.prompt_text.str.contains("peace"))]
@@ -565,6 +488,7 @@ def inference(processed_data,
                     print("\n ========> Expel OVERWRITE")
                     print(df_L1.loc[:, ['prompt_text', 'rootcode', 'score']].to_string())
         # ============================================================ #
+
 
         # ==================== Level2 Modality  ==================== #
         select_prompt_idx = df_L1.prompt_idx
@@ -625,11 +549,12 @@ def inference(processed_data,
     out_df['root_L1'] = root_L1_all
     out_df['prompt_L1'] = prompt_L1_all
 
-    out_df['binary_L2'] = penta_to_binary(penta_L2_all)
-    out_df['penta_L2'] = penta_L2_all
-    out_df['root_L2'] = root_L2_all
-    out_df['prompt_L2'] = prompt_L2_all
-    out_df['modality_L2'] = modality_L2_all
+    if apply_level2:
+        out_df['binary_L2'] = penta_to_binary(penta_L2_all)
+        out_df['penta_L2'] = penta_L2_all
+        out_df['root_L2'] = root_L2_all
+        out_df['prompt_L2'] = prompt_L2_all
+        out_df['modality_L2'] = modality_L2_all
 
     return out_df
 

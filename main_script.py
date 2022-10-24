@@ -84,10 +84,12 @@ def main(
     TENSE = df_prompt.columns[2:].to_list()
     tense_L1 = 'past'
     tense_L2 = TENSE.copy()
+    apply_level2 = False if [tense_L1] == tense_L2 else True
 
     print("\nTENSE:\t\t", TENSE)
     print("tense_L1:\t", tense_L1)
     print("tense_L2:\t", tense_L2)
+    print(f"apply level2?\t {apply_level2}")
 
     # ======== all hypothesis ======== #
     prompt_text = df_prompt[TENSE] \
@@ -132,7 +134,7 @@ def main(
             print(f"\nOffline inference from the saved scores at {score_dir}")
 
         out_df = inference(processed_data,
-                           TENSE=TENSE,
+                           apply_level2=apply_level2,
                            tense_L1=tense_L1,
                            tense_L2=tense_L2,
                            df_prompt_flatten=df_prompt_flatten,
@@ -154,7 +156,7 @@ def main(
         tokenizer, nli_model = load_nli_model(model_name)
 
         out_df = inference(processed_data,
-                           TENSE=TENSE,
+                           apply_level2=apply_level2,
                            tense_L1=tense_L1,
                            tense_L2=tense_L2,
                            df_prompt_flatten=df_prompt_flatten,
@@ -172,8 +174,11 @@ def main(
     print(f"\n\n ===== Saving to {output_dir} ===== ")
     if output_dir:
         out_df.to_csv(output_dir, index=False)
+
     print("\n\n ===== Summary ===== \n")
-    summary = print_result(out_df, log)
+    summary = print_result(out_df, 'L1', log)
+    if apply_level2:
+        summary.update(print_result(out_df, 'L2', log))
 
     return out_df, summary
 
