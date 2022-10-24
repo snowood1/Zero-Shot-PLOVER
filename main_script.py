@@ -46,7 +46,8 @@ def main(
         infer_setting="offline",
         run_offline_nli=False,
         write_score_result=False,
-        log=True
+        infer_details=True,
+        summary_details=True,
 ):
 
     print("\n ==== Inference setting:  ==== ")
@@ -68,7 +69,7 @@ def main(
         processed_data = pd.read_csv(data_dir, delimiter='\t')
         processed_data.source = processed_data.source.apply(lambda x: x.split(":")[-1])
         processed_data.target = processed_data.target.apply(lambda x: x.split(":")[-1])
-        processed_data = processed_data[['gold_binary','gold_penta', 'gold_root', 'event_type', 'sentence', 'source', 'target']]
+        processed_data = processed_data[['gold_binary','event_type', 'sentence', 'source', 'target']]
 
     # ======== Prompts ======== #
     df_prompt = pd.read_csv(prompt_dir, header=0, delimiter='\t')
@@ -143,7 +144,7 @@ def main(
                            tokenizer=None,
                            nli_model=None,
                            consult_penalty=consult_penalty,
-                           log=log,
+                           log=infer_details,
                            peace_overwrite=True,
                            blockade_overwrite=True,
                            conflict_overwrite=True,
@@ -165,20 +166,20 @@ def main(
                            tokenizer=tokenizer,
                            nli_model=nli_model,
                            consult_penalty=consult_penalty,
-                           log=log,
+                           log=infer_details,
                            peace_overwrite=True,
                            blockade_overwrite=True,
                            conflict_overwrite=True,
                            expel_overwrite=True)
 
-    print(f"\n\n ===== Saving to {output_dir} ===== ")
+    print(f"\n\nSaving to {output_dir}")
     if output_dir:
         out_df.to_csv(output_dir, index=False)
 
     print("\n\n ===== Summary ===== \n")
-    summary = print_result(out_df, 'L1', log)
+    summary = print_result(out_df, 'L1', summary_details)
     if apply_level2:
-        summary.update(print_result(out_df, 'L2', log))
+        summary.update(print_result(out_df, 'L2', summary_details))
 
     return out_df, summary
 
