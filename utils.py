@@ -8,6 +8,17 @@ import warnings
 warnings.simplefilter("ignore", UserWarning)
 from sklearn.metrics import classification_report, confusion_matrix
 
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise ValueError('Boolean value expected.')
+
+
 LABEL_DICT = pd.read_csv('./prompts/rootcode_modality.txt', header=0, delimiter='\t')
 RootToPenta = dict(zip(LABEL_DICT.rootcode, LABEL_DICT.pentacode))
 

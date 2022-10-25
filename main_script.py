@@ -6,7 +6,7 @@ pd.set_option('max_colwidth', 0)
 import warnings
 warnings.simplefilter("ignore", UserWarning)
 import argparse
-from utils import inference, print_result, load_nli_model, run_all_nli_prompt
+from utils import inference, print_result, load_nli_model, run_all_nli_prompt,str2bool
 
 
 # ======== For debug  ======== #
@@ -38,19 +38,20 @@ from utils import inference, print_result, load_nli_model, run_all_nli_prompt
 
 def main(
         data_dir="./datasets/PLV_test.tsv",
-        prompt_dir="./prompts/Tree.txt" ,
+        prompt_dir="./prompts/Tree.txt",
         score_dir="./scores/PLV_test-Tree.npy",
-        model_name="roberta-large-mnli",
         output_dir="./outputs/PLV_test-Tree-result.csv",
+        model_name="roberta-large-mnli",
         consult_penalty=0.02,
         infer_setting="offline",
         run_offline_nli=False,
         write_score_result=False,
         infer_details=True,
-        summary_details=True,
+        summary_details=True
 ):
 
     print("\n ==== Inference setting:  ==== ")
+
     if infer_setting == "offline":
         print(" > offline inference")
         if run_offline_nli == True:
@@ -70,6 +71,7 @@ def main(
         processed_data.source = processed_data.source.apply(lambda x: x.split(":")[-1])
         processed_data.target = processed_data.target.apply(lambda x: x.split(":")[-1])
         processed_data = processed_data[['gold_binary','event_type', 'sentence', 'source', 'target']]
+
 
     # ======== Prompts ======== #
     df_prompt = pd.read_csv(prompt_dir, header=0, delimiter='\t')
@@ -185,21 +187,23 @@ def main(
 
 
 if __name__ == '__main__':
-    # ======== Setting ======== #
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset', type=str, default="./datasets/PLV_test.tsv")
+    parser.add_argument('--data_dir', type=str, default="./datasets/PLV_test.tsv")
     parser.add_argument("--prompt_dir", type=str, default="./prompts/Tree.txt")
     parser.add_argument("--score_dir", type=str, default="./scores/PLV_test-Tree.npy")
     parser.add_argument("--model_name", default="roberta-large-mnli", type=str)
     parser.add_argument("--consult_penalty", default=0.02, type=float)
     parser.add_argument("--infer_setting", type=str, choices=['online', 'offline'])
-    parser.add_argument("--run_offline_nli", default=False, type=bool)
-    parser.add_argument("--write_score_result", default=False, type=bool)
+    parser.add_argument("--run_offline_nli", default=False, type=str2bool)
+    parser.add_argument("--write_score_result", default=False, type=str2bool)
     parser.add_argument("--output_dir", type=str, default="./outputs/PLV_test-Tree-result.csv")
-    parser.add_argument("--log", type=bool, default=True)
+    parser.add_argument("--infer_details", type=str2bool, default=True)
+    parser.add_argument("--summary_details", type=str2bool, default=True)
     args = parser.parse_args()
 
-    main(data_dir=args.dataset,
+    print(args)
+
+    _, _ = main(data_dir=args.data_dir,
          prompt_dir=args.prompt_dir,
          score_dir=args.score_dir,
          model_name=args.model_name,
@@ -208,7 +212,8 @@ if __name__ == '__main__':
          infer_setting=args.infer_setting,
          run_offline_nli=args.run_offline_nli,
          write_score_result=args.write_score_result,
-         log=args.log)
+         infer_details=args.infer_details,
+         summary_details=args.summary_details)
 
 # ======== For debug  ======== #
 
