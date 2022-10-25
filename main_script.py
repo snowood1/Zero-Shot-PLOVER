@@ -9,33 +9,6 @@ import argparse
 from utils import inference, print_result, load_nli_model, run_all_nli_prompt,str2bool
 
 
-# ======== For debug  ======== #
-
-# data_dir = args.dataset
-# prompt_dir = args.prompt_dir
-# score_dir = args.score_dir
-# model_name = args.model_name
-# output_dir = args.output_dir
-# consult_penalty = args.consult_penalty
-# infer_setting = args.infer_setting
-# run_offline_nli = args.run_offline_nli
-# write_score_result = args.write_score_result
-#
-
-# data_dir = './datasets/PLV_test.tsv'        # PLV_test,  AW_test
-# prompt_dir = "./prompts/Tree.txt"          # Tiny,  Full,  Tree
-# RESULT_DIR = "./results/PLV_test-Tree.npy"
-#
-# model_name = "roberta-large-mnli"
-# consult_penalty = 0.02
-
-# infer_setting = "offline"    # offline, online
-# run_offline_nli = True
-# write_offline_result = False
-
-# infer_setting = "online"    # offline, online
-
-
 def main(
         data_dir="./datasets/PLV_test.tsv",
         prompt_dir="./prompts/Tree.txt",
