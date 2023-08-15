@@ -4,6 +4,11 @@ This repository contains the essential code for the paper [Synthesizing Politica
 
 ZSP is a modality-aware tree-query framework based on natural language inference (NLI) to solve relation classification for PLOVER ontology.
 
+![Alt](./Framework.png)
+
+
+
+
 ## Structure
 - codebooks:     CAMEO and PLOVER ontology codebooks
 - datasets:   PLV and AW datasets.
