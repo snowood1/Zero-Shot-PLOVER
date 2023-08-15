@@ -15,7 +15,7 @@ ZSP is a modality-aware tree-query framework based on natural language inference
 
 ## Quick Start
 
-- Click and run [demo.ipynb](./demo.ipynb) or its [Google Colab link](https://colab.research.google.com/drive/1E-yZMPtszzBf0GNA0czRttvCpJF7W7w8) to see our figures and report shown in the paper.
+- Click and run the [Google Colab Demo](https://colab.research.google.com/drive/1E-yZMPtszzBf0GNA0czRttvCpJF7W7w8) to see our figures and report shown in the paper.
 
 - Offline inference using a saved checkpoint of NLI scores. No GPU computation is required.
 
