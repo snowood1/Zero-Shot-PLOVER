@@ -1,20 +1,23 @@
 # zero-shot-PLOVER (ZSP)
 
-This repository contains the essential code for the paper [Utilizing Event Ontology Knowledge for Zero-Shot Relation
-Classification]. 
+This repository contains the essential code for the paper [Leveraging Codebook Knowledge with NLI and ChatGPT for Political
+Zero-Shot Relation Classification]. 
 
 ZSP is a modality-aware tree-query framework based on natural language inference (NLI) to solve relation classification for PLOVER ontology.
 
 ## Structure
-
 - codebooks:     CAMEO and PLOVER ontology codebooks
 - datasets:   PLV and AW datasets.
 - prompts:  Hypothesis designed from the codebooks.
 - scores: saved NLI scores for reproduction.
 - main_script.py:  Our main python script file.
 - utils.py:   utility functions
+- demo.ipynb:      a demo Colab notebook that loads our saved query result.
 
 ## Quick Start
+
+- Click and run [demo.ipynb](./demo.ipynb) to see our figures and report shown in the paper.
+
 
 - Offline inference using a saved checkpoint of NLI scores. No GPU computation is required.
 
