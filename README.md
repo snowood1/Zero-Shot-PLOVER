@@ -21,7 +21,7 @@ The goal is to offer political scientists a pragmatic solution beyond mere datas
 
 ## Quick Start
 
-- Click the Colab demo to see the figures and report shown in the paper: [![Google Colab Demo](https://colab.research.google.com/assets/colab-badge.svg)(https://colab.research.google.com/drive/1E-yZMPtszzBf0GNA0czRttvCpJF7W7w8)] 
+- Click the Colab demo to see the figures and report shown in the paper: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1E-yZMPtszzBf0GNA0czRttvCpJF7W7w8)
 
 - Offline inference using a saved checkpoint of NLI scores. No GPU computation is required.
 
