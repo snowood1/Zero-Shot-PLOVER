@@ -1,7 +1,7 @@
 # zero-shot-PLOVER (ZSP)
 
 This repository contains the essential code and data for the paper [Leveraging Codebook Knowledge with NLI and ChatGPT for Zero-Shot
-Political Relation Classification (ACL 2024)](https://arxiv.org/pdf/2308.07876v2.pdf). 
+Political Relation Classification (ACL 2024)](https://arxiv.org/pdf/2308.07876). 
 
 ZSP is a modality-aware tree-query framework based on natural language inference (NLI) to solve relation classification for PLOVER ontology.
 The goal is to offer political scientists a pragmatic solution beyond mere dataset annotation for black-box supervised models, providing a practical alternative that taps into existing knowledge and codebook resources.
