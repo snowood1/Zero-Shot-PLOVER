@@ -85,13 +85,11 @@ This might take longer than Online inference, but it can save the NLI scores fil
 
 If you find this repo useful in your research, please consider citing:
 
-      @misc{hu2024leveragingcodebookknowledgenli,
-            title={Leveraging Codebook Knowledge with NLI and ChatGPT for Zero-Shot Political Relation Classification}, 
-            author={Yibo Hu and Erick Skorupa Parolin and Latifur Khan and Patrick T. Brandt and Javier Osorio and Vito J. D'Orazio},
-            year={2024},
-            eprint={2308.07876},
-            archivePrefix={arXiv},
-            primaryClass={cs.CL},
-            url={https://arxiv.org/abs/2308.07876}, 
+      @inproceedings{hu2024leveraging,
+        title={Leveraging Codebook Knowledge with NLI and ChatGPT for Zero-Shot Political Relation Classification},
+        author={Hu, Yibo and Parolin, Erick Skorupa and Khan, Latifur and Brandt, Patrick and Osorio, Javier and D’Orazio, Vito},
+        booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+        pages={583--603},
+        year={2024}
       }
 
