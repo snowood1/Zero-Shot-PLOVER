@@ -44,7 +44,7 @@ REJECT	3	<S> rejected to yield to <T>	None
 THREATEN	3	<S> issued a ultimatum to <T>	None
 THREATEN	3	<S> threatened something against <T>	None
 ASSAULT	4	<S> assaulted person of <T>	<S> threatened to assault person of <T>
-ASSAULT	4	<S> destropyed property of <T>	<S> threatened to destropy property of <T>
+ASSAULT	4	<S> destroyed property of <T>	<S> threatened to destroy property of <T>
 ASSAULT	4	<S> killed person of <T>	<S> threatened to kill person of <T>
 ASSAULT	4	<S> launched military strikes against <T>	<S> threatened to launch military strikes against <T>
 ASSAULT	4	<S> violated ceasefire with <T>	<S> threatened to violate ceasefire with <T>
